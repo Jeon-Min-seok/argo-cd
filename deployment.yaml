@@ -22,6 +22,6 @@ spec:
     spec:
       containers:
       - name: 
-        image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+        image: nginx
         ports:
         - containerPort: 8080 #상의
