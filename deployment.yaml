@@ -18,10 +18,10 @@ spec:
   template:
     metadata:
       labels:
-        app: ${{ secrets.ECR_REGI }}
+        app: test-argo
     spec:
       containers:
       - name: 
-        image: sd0241/ssacnode:0.3
+        image: ${{ secrets.ECR_REGI }}
         ports:
         - containerPort: 8080 #상의
