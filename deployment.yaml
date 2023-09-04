@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: <name>
+  name: test-argo
   labels:
-    app: <NAME>
+    app: test-argo
 spec:
   type: RollingUpdate
   strategy:
@@ -14,11 +14,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: <NAME>
+      app: test-argo
   template:
     metadata:
       labels:
-        app: <NAME>
+        app: test-argo
     spec:
       containers:
       - name: 
