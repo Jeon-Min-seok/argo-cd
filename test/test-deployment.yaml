@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: test-argo
-        image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node:v0.0.61
-        ports:
+        image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node:0.1
         - containerPort: 8080 #상의
 #image:
 #  tag: v0.0.61
