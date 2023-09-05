@@ -11,4 +11,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80 # 이부분을 443으로 해야하나?
-      targetPort: 8080 # 상의
+      targetPort: 80 # 상의
