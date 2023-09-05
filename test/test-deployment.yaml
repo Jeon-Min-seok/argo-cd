@@ -21,7 +21,7 @@ spec:
         app: test-argo
     spec:
       containers:
-      - name: 
+      - name: test-argo
         image: nginx
         ports:
-        - containerPort: 80 #상의
+        - containerPort: 8080 #상의
