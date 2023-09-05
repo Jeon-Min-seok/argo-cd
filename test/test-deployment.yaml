@@ -24,4 +24,4 @@ spec:
       - name: 
         image: nginx
         ports:
-        - containerPort: 8080 #상의
+        - containerPort: 80 #상의
