@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 8080 #상의
 #image:
-#  tag: v0.0.58
+#  tag: v0.0.59
