@@ -5,7 +5,13 @@ metadata:
   labels:
     app: test-argo
 spec:
-  replicas: 3
+  type: RollingUpdate
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  
+  replicas: 2
   selector:
     matchLabels:
       app: test-argo
@@ -19,3 +25,5 @@ spec:
         image: nginx
         ports:
         - containerPort: 8080 #상의
+image:
+  tag: v0.0.54
