@@ -25,5 +25,3 @@ spec:
         image: nginx
         ports:
         - containerPort: 8080 #상의
-image:
-  tag: v0.0.54
