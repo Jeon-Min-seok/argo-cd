@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test-argo
-        image: sd0241/ssacnode:0.3
+        image: nginx
         ports:
         - containerPort: 8080 #상의
 #image:
