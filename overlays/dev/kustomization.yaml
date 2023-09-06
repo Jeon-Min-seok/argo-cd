@@ -9,5 +9,5 @@ images:
 resources:
 - ../../base
 patchesStrategicMerge:
-- deployment-patch.yaml
-- service-patch.yaml
+- test-deployment.yaml
+- test-service.yaml
