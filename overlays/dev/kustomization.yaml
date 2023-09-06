@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
-  newTag: 6b7fa49851e9c3683bab277920cccc9d7341f96c
+  newTag: 5ab566aec6c495f7b97eea02171e2a87962565d5
 - name: ghcr.io/wlgns5376/example-app
   newTag: dev
 resources:
