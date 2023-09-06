@@ -3,4 +3,4 @@ kind: Kustomization
 images:
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
-  newTag: f91f22db6ef1e0ebb67e6bffcd5e116aad64a18b
+  newTag: b82349a1c6b936675fd242239d9e026b1e434ce9
