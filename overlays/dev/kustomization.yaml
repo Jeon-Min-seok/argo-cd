@@ -8,3 +8,6 @@ images:
   newTag: dev
 resources:
 - ../../base
+patchesStrategicMerge:
+- deployment-patch.yaml
+- service-patch.yaml
