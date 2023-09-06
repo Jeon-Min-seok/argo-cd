@@ -1,0 +1,7 @@
+piVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: test-argo
+  labels:  
+    app: test-argo
+    replicas: 6
