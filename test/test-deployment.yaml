@@ -19,5 +19,3 @@ spec:
         image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node:latest
         ports:
         - containerPort: 8080 #상의
-#image:
-#  tag: 9a70181f
