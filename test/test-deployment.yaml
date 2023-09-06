@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 8080 #상의
 #image:
-#  tag: \2cb33393
+#  tag: 7fc59518
