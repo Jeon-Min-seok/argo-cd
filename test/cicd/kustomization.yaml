@@ -1,1 +1,7 @@
+resources:
+- test-deployment.yaml
 
+images:
+- name: /
+  newName: /
+  newTag: 
