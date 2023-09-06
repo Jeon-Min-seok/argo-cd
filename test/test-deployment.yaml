@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: test-argo
-        image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node:55460ef4f3343b1d5bf6fbdb522c2e5a2841dda3
+        image: nginx
         ports:
         - containerPort: 8080 #상의
 #image:
