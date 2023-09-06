@@ -2,6 +2,6 @@ resources:
 - test-deployment.yaml
 
 images:
-- name: /
-  newName: /
-  newTag: 
+- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+  newTag: 9433b208
