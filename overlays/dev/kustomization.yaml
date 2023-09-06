@@ -1,6 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
+- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+  newTag: 0724d2422bbf6244b0d75510d3a2b7e3f81deeda
 - name: ghcr.io/wlgns5376/example-app
   newTag: dev
 resources:
