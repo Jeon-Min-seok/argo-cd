@@ -5,7 +5,7 @@ metadata:
   labels:
     app: test-argo
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: test-argo
@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 8080 #상의
 #image:
-#  tag: 022af20f
+#  tag: 80b8cf49
