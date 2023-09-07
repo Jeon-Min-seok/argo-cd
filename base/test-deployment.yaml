@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,5 +24,33 @@ spec:
       containers:
       - name: test-argo
         image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:latest
+        ports:
+        - containerPort: 8080 #상의
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-argo
+  labels:
+    app: test-argo
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 3
+  revisionHistoryLimit: 1
+  replicas: 2
+  selector:
+    matchLabels:
+      app: test-argo
+  template:
+    metadata:
+      labels:
+        app: test-argo
+    spec:
+      containers:
+      - name: test-argo
+        image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:latest
         ports:
         - containerPort: 8080 #상의
