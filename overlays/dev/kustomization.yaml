@@ -1,10 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
-  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
+- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
+  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newTag: e5e4622073a7688f921cfdba87cb376170a90374
-- name: ghcr.io/wlgns5376/example-app
-  newTag: dev
+- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
+  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
+  newTag: /
 resources:
 - ../../base
