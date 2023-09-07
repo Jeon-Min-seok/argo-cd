@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
-  newTag: e734b6024522b3c289f9d8359419ec994480d49e
+  newTag: 1fb8dd1137aa1f33727c72b0fe0cc7722e29c355
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newTag: a4a2f1b76d9dcc8917e0f650444d635b37880c80
