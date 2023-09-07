@@ -7,8 +7,6 @@ images:
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newTag: e5e4622073a7688f921cfdba87cb376170a90374
-- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/test-node
-  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
-  newTag: a0450b4a7d0ade93fcec7406551055fee1812810
+
 resources:
 - ../../base
