@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: ssac-front
-          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:2
+          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:1
           resources:
             limits:
               cpu: "400m"
