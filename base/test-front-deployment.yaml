@@ -43,24 +43,7 @@ spec:
                       values:
                         - back
                 topologyKey: "kubernetes.io/hostname"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: ssac-front
-  labels:
-    app: ssac-front
-    tier: front
-spec:
-  type: NodePort # 서비스 타입
-  ports:
-    - port: 3000 # 서비스 포트
-      targetPort: 3000 # 타켓, 즉 pod의 포트
-      protocol: TCP
-  selector:
-    app: ssac-front
-​
----
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
