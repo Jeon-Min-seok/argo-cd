@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: inging
+  annotations:
+    kubernetes.io/ingress.class: alb
+    external-dns.alpha.kubernetes.io/hostname: kostaxyz.site
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    #alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/target-type: instance
+    # alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/40b26b2f-9d04-4e06-a772-cdcf8b49657a
+spec:
+  ingressClassName: alb
+  defaultBackend:
+    service:
+      name: ssac-front
+      port:
+        number: 3000
