@@ -1,8 +1,8 @@
 resources:
 - test-front-deployment.yaml
-- ssac-front-service.yml
+- ssac-front-service.yaml
 - test-back-deployment.yaml
-- ssac-back-service.yml
+- ssac-back-service.yaml
 - ssac-ingress.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
