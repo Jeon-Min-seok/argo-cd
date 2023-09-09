@@ -29,4 +29,4 @@ spec:
       targetPort: 5000 # 타켓, 즉 pod의 포트
   selector:
     app: ssac-back
----​
+...​
