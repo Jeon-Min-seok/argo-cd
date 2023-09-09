@@ -9,7 +9,7 @@ metadata:
     #alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: instance
     # alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/40b26b2f-9d04-4e06-a772-cdcf8b49657a
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/dc59a277-4a13-45b8-b989-995e0ede6a37
 spec:
   ingressClassName: alb
   defaultBackend:
