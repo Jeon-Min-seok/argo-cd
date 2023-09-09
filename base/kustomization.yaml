@@ -1,5 +1,5 @@
 resources:
-- test-front-deployment.yaml
+#- test-front-deployment.yaml
 - test-back-deployment.yaml
 - ssac-back-service.yaml
 - ssac-front-service.yaml
