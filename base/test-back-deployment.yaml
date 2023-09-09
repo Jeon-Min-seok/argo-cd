@@ -24,14 +24,13 @@ spec:
     spec:
       containers:
         - name: ssac-back
-          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:1
+          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:4
           resources:
             limits:
-              cpu: "100m"
-              memory: 1000Mi
+              cpu: "200m"
+              memory: 128Mi
             requests:
-              cpu: "40m"
-              memory: 100Mi
+              cpu: "100m"
+              memory: 64Mi
           ports:
             - containerPort: 5000
-
