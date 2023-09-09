@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,4 +14,19 @@ spec:
       protocol: TCP
   selector:
     app: ssac-front
-​
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ssac-back
+  labels:
+    app: ssac-back
+    tier: back
+spec:
+  type: NodePort # 서비스 타입
+  ports:
+    - port: 5000 # 서비스 포트
+      targetPort: 5000 # 타켓, 즉 pod의 포트
+  selector:
+    app: ssac-back
+---​
