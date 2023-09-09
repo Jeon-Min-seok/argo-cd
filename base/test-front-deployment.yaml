@@ -10,7 +10,8 @@ spec:
       maxUnavailable: 1
       maxSurge: 1
   minReadySeconds: 20
-  replicas: 2
+  # replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: ssac-front
