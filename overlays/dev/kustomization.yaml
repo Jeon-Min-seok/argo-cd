@@ -4,8 +4,8 @@ images:
 #- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
 #  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back
 #  newTag: v0.0.2
-- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
-  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
-  newTag: v0.0.12
+#- name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
+#  newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
+#  newTag: v0.0.12
 resources:
 - ../../base
