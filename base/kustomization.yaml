@@ -1,8 +1,8 @@
 resources:
 - ssac-front-deployment.yaml
 - ssac-front-service.yaml
-- ssac-back-deployment.yaml
-- ssac-back-service.yaml
+#- ssac-back-deployment.yaml
+#- ssac-back-service.yaml
 - ssac-ingress.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
