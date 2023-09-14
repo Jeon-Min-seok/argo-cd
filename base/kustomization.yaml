@@ -1,6 +1,6 @@
 resources:
-#- ssac-front-deployment.yaml
-#- ssac-front-service.yaml
+- ssac-front-deployment.yaml
+- ssac-front-service.yaml
 - ssac-back-deployment.yaml
 - ssac-back-service.yaml
 - ssac-ingress.yaml
