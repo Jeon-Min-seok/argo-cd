@@ -1,29 +1,32 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingttti
+  name: ssac-ing
   annotations:
     #kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     #alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: instance
     #alb.ingress.kubernetes.io/target-type: ip
-    external-dns.alpha.kubernetes.io/hostname: log-land.com
+    external-dns.alpha.kubernetes.io/hostname: www.log-land.com
+    ## 퍼블릭 서브넷(az 안겹치게)으로 계속 변경
+    alb.ingress.kubernetes.io/subnets: subnet-0191558511ce49ad2, subnet-0b62a0972ee5211aa
+    alb.ingress.kubernetes.io/backend-protocol: "HTTP"
     external-dns.alpha.kubernetes.io/ttl: "100"
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/d4e2d1ce-7bc7-4557-b7c8-bbd114bf4d37
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:107647632326:certificate/52e27815-afeb-46b6-b56c-503b3ddf4be4
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
 spec:
   tls:
     - hosts:
-        - log-land.com
+        - www.log-land.com
   ingressClassName: alb
   defaultBackend:
     service:
       name: ssac-front
       port:
-        number: 3000
+        number: 443
   rules:
-    - host: log-land.com
+    - host: www.log-land.com
       http:
         paths:
           - path: /
@@ -32,11 +35,39 @@ spec:
               service:
                 name: ssac-front
                 port:
-                  number: 3000
-          # - path: /auth
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: ssac-front
-          #       port:
-          #         number: 3000
+                  number: 443
+          - path: /main/
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
+          - path: /helathcheck/
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
+          - path: /users/
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
+          - path: /auth/kakao
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
+          - path: /upload
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
