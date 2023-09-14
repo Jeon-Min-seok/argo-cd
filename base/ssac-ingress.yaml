@@ -10,7 +10,7 @@ metadata:
     #alb.ingress.kubernetes.io/target-type: ip
     external-dns.alpha.kubernetes.io/hostname: log-land.com
     external-dns.alpha.kubernetes.io/ttl: "100"
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/dc59a277-4a13-45b8-b989-995e0ede6a37
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:107647632326:certificate/d4e2d1ce-7bc7-4557-b7c8-bbd114bf4d37
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
 spec:
   tls:
