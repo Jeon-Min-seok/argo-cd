@@ -6,6 +6,6 @@ images:
   newTag: v0.2.0
 - name: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
   newName: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front
-  newTag: v0.3.5
+  newTag: v0.3.6
 resources:
 - ../../base
