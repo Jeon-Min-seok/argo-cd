@@ -24,6 +24,13 @@ spec:
         - name: ssac-front
           image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:30
           # image: 583483472705.dkr.ecr.ap-northeast-2.amazonaws.com/ssac-front:2
+          env:
+          - name: REACT_APP_GOOGLE_MAP_API_KEY
+            value: "AIzaSyBx-Mlw6oLJkL-SCBYJ7qWaKbKjxgh9mLo"
+          - name: REACT_APP_S3_URL
+            value: "https://sesacteamb.s3.amazonaws.com"
+          - name: REACT_APP_BACKEND
+            value: "https://www.log-land.com"
           resources:
             limits:
               cpu: "30m"
