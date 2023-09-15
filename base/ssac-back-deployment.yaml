@@ -8,7 +8,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 1
+      maxUnavailable: 3
       maxSurge: 1
   minReadySeconds: 20
   replicas: 2
@@ -24,13 +24,20 @@ spec:
     spec:
       containers:
         - name: ssac-back
-          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:4
+          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:21
           resources:
             limits:
-              cpu: "200m"
-              memory: 128Mi
-            requests:
               cpu: "100m"
-              memory: 64Mi
+              memory: 512Mi
+            requests:
+              cpu: "30m"
+              memory: 256Mi
           ports:
             - containerPort: 5000
+      #     volumeMounts:
+      #       - name: persistent-storage
+      #         mountPath: /src
+      # volumes:
+      #   - name: persistent-storage
+      #     persistentVolumeClaim:
+      #       claimName: efs-claim
