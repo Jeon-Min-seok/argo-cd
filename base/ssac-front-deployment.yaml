@@ -3,12 +3,6 @@ kind: Deployment
 metadata:
   name: ssac-front
 spec:
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 3
-      maxSurge: 1
-  minReadySeconds: 20
   replicas: 2
   selector:
     matchLabels:
@@ -22,17 +16,17 @@ spec:
     spec:
       containers:
         - name: ssac-front
-          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:30
+          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-front:29
           # image: 583483472705.dkr.ecr.ap-northeast-2.amazonaws.com/ssac-front:2
           resources:
             limits:
-              cpu: "30m"
+              cpu: "400m"
               memory: 1024Mi
             requests:
               cpu: "10m"
               memory: 512Mi
           ports:
-            - containerPort: 80
+            - containerPort: 3000
       affinity:
         podAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
