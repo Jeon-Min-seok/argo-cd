@@ -10,7 +10,7 @@ metadata:
     #alb.ingress.kubernetes.io/target-type: ip
     external-dns.alpha.kubernetes.io/hostname: www.log-land.com
     ## 퍼블릭 서브넷(az 안겹치게)으로 계속 변경
-    alb.ingress.kubernetes.io/subnets: subnet-0f0ced513144226a7, subnet-06e775a69a8d73971
+    alb.ingress.kubernetes.io/subnets: subnet-02702d4b004b49f84, subnet-02cadb09698c462e3
     alb.ingress.kubernetes.io/backend-protocol: "HTTP"
     external-dns.alpha.kubernetes.io/ttl: "100"
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:107647632326:certificate/52e27815-afeb-46b6-b56c-503b3ddf4be4
@@ -50,13 +50,6 @@ spec:
                 name: ssac-back
                 port:
                   number: 80
-          - path: /users/
-            pathType: Prefix
-            backend:
-              service:
-                name: ssac-back
-                port:
-                  number: 80
           - path: /auth/kakao
             pathType: Prefix
             backend:
@@ -65,6 +58,13 @@ spec:
                 port:
                   number: 80
           - path: /upload
+            pathType: Prefix
+            backend:
+              service:
+                name: ssac-back
+                port:
+                  number: 80
+          - path: /timeline
             pathType: Prefix
             backend:
               service:
