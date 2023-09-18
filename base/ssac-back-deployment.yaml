@@ -7,9 +7,6 @@ metadata:
 spec:
   strategy:
     type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 3
-      maxSurge: 1
   minReadySeconds: 20
   replicas: 2
   selector:
@@ -24,10 +21,10 @@ spec:
     spec:
       containers:
         - name: ssac-back
-          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:21
+          image: 107647632326.dkr.ecr.us-east-2.amazonaws.com/ssac-back:23
           resources:
             limits:
-              cpu: "100m"
+              cpu: "400m"
               memory: 512Mi
             requests:
               cpu: "30m"
